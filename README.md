@@ -15,15 +15,15 @@ Projeto de análise de dados de e-commerce usando Python, Airflow e PostgreSQL p
 - Git instalado
 
 ## Estrutura do Projeto
-ecommerce_analytics/
-├── dags/                 # Airflow DAGs
-├── notebooks/            # Jupyter notebooks
-├── plugins/              # Plugins do Airflow
-├── sql/                  # Scripts SQL
-├── src/                  # Código fonte
-├── data/                 # Dados gerados
-├── logs/                 # Logs do Airflow
-├── .env                  # Variáveis de ambiente
+ecommerce_analytics/ \
+├── dags/                 # Airflow DAGs \
+├── notebooks/            # Jupyter notebooks \
+├── plugins/              # Plugins do Airflow \
+├── sql/                  # Scripts SQL \
+├── src/                  # Código fonte \
+├── data/                 # Dados gerados \
+├── logs/                 # Logs do Airflow \
+├── .env                  # Variáveis de ambiente \
 └── docker-compose.yml    # Configuração dos containers
 
 ## Setup do Projeto
