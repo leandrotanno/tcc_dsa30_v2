@@ -42,7 +42,7 @@ cp .env.example .env
 ```bash
 DB_USER=postgres
 DB_PASSWORD=postgres123
-FERNET_KEY=sua_fernet_key_aqui
+FERNET_KEY=sua_fernet_key_aqui # gerar key: python -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
 AIRFLOW_UID=50000
 ```
 
