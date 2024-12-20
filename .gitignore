@@ -1,0 +1,21 @@
+# Ambiente virtual
+venv/
+env/
+
+# Arquivos de configuração
+.env
+config/*.ini
+
+# Dados
+data/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+
+# Notebooks checkpoints
+.ipynb_checkpoints
+
+# IDEs
+.vscode/
+.idea/

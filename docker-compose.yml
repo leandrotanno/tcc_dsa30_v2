@@ -1,0 +1,146 @@
+version: '3.8'
+
+services:
+ postgres:
+   image: postgres:latest
+   container_name: ecommerce_db
+   environment:
+     POSTGRES_DB: ecommerce
+     POSTGRES_USER: ${DB_USER}
+     POSTGRES_PASSWORD: ${DB_PASSWORD}
+   ports:
+     - "5432:5432"
+   volumes:
+     - postgres_data:/var/lib/postgresql/data
+     - ./sql/schema.sql:/docker-entrypoint-initdb.d/1-schema.sql
+   networks:
+     - ecommerce_network
+   healthcheck:
+     test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ecommerce"]
+     interval: 10s
+     timeout: 5s
+     retries: 5
+
+ postgres-airflow:
+   image: postgres:latest
+   container_name: postgres-airflow
+   environment:
+     POSTGRES_DB: airflow
+     POSTGRES_USER: airflow
+     POSTGRES_PASSWORD: airflow
+   ports:
+     - "5433:5432"
+   volumes:
+     - postgres_airflow_data:/var/lib/postgresql/data
+   networks:
+     - ecommerce_network
+   healthcheck:
+     test: ["CMD", "pg_isready", "-U", "airflow"]
+     interval: 10s
+     timeout: 5s
+     retries: 5
+
+ jupyter:
+   build:
+     context: .
+     dockerfile: Dockerfile
+   container_name: ecommerce_jupyter
+   volumes:
+     - .:/app
+     - ./notebooks:/app/notebooks
+   ports:
+     - "8888:8888"
+   environment:
+     - DB_HOST=postgres
+     - DB_PORT=5432
+     - DB_NAME=ecommerce
+     - DB_USER=${DB_USER}
+     - DB_PASSWORD=${DB_PASSWORD}
+   depends_on:
+     postgres:
+       condition: service_healthy
+   networks:
+     - ecommerce_network
+
+ airflow-init:
+   image: apache/airflow:2.7.3
+   container_name: airflow-init
+   depends_on:
+     postgres-airflow:
+       condition: service_healthy
+   environment:
+     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres-airflow/airflow
+     - AIRFLOW__CORE__LOAD_EXAMPLES=false
+     - AIRFLOW__CORE__FERNET_KEY=${FERNET_KEY}
+   command: version
+   entrypoint: >
+     bash -c "
+       sleep 10;
+       airflow db init &&
+       airflow users create --username admin --password admin --firstname Anonymous --lastname Admin --role Admin --email admin@example.com;
+       exit 0;
+     "
+   user: "${AIRFLOW_UID:-50000}:0"
+   volumes:
+     - ./dags:/opt/airflow/dags
+     - ./logs:/opt/airflow/logs
+     - ./plugins:/opt/airflow/plugins
+   networks:
+     - ecommerce_network
+
+ airflow-webserver:
+   image: apache/airflow:2.7.3
+   container_name: airflow-webserver
+   depends_on:
+     postgres-airflow:
+       condition: service_healthy
+     airflow-init:
+       condition: service_completed_successfully
+   environment:
+     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres-airflow/airflow
+     - AIRFLOW__CORE__LOAD_EXAMPLES=false
+     - AIRFLOW__CORE__FERNET_KEY=${FERNET_KEY}
+   volumes:
+     - ./dags:/opt/airflow/dags
+     - ./logs:/opt/airflow/logs
+     - ./plugins:/opt/airflow/plugins
+     - ./src:/opt/airflow/src
+   ports:
+     - "8080:8080"
+   user: "${AIRFLOW_UID:-50000}:0"
+   command: webserver
+   healthcheck:
+     test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
+     interval: 30s
+     timeout: 10s
+     retries: 5
+   networks:
+     - ecommerce_network
+
+ airflow-scheduler:
+   image: apache/airflow:2.7.3
+   container_name: airflow-scheduler
+   depends_on:
+     airflow-webserver:
+       condition: service_healthy
+   environment:
+     - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres-airflow/airflow
+     - AIRFLOW__CORE__LOAD_EXAMPLES=false
+     - AIRFLOW__CORE__FERNET_KEY=${FERNET_KEY}
+   volumes:
+     - ./dags:/opt/airflow/dags
+     - ./logs:/opt/airflow/logs
+     - ./plugins:/opt/airflow/plugins
+     - ./src:/opt/airflow/src
+   user: "${AIRFLOW_UID:-50000}:0"
+   command: scheduler
+   networks:
+     - ecommerce_network
+
+volumes:
+ postgres_data:
+ postgres_airflow_data:
+
+networks:
+ ecommerce_network:
+   driver: bridge

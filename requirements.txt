@@ -1,0 +1,10 @@
+pandas
+numpy
+psycopg2-binary
+python-dotenv
+jupyter
+jupyterlab
+scikit-learn
+matplotlib
+seaborn
+tqdm # progress bar da geracao dos arquivos
