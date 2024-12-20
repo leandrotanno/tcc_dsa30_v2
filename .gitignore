@@ -1,21 +1,36 @@
-# Ambiente virtual
-venv/
-env/
-
-# Arquivos de configuração
-.env
-config/*.ini
-
-# Dados
-data/
-
-# Cache Python
+# Python
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
 
-# Notebooks checkpoints
+# Airflow
+logs/
+airflow.db
+airflow.cfg
+unittests.cfg
+webserver_config.py
+
+# Dados
+*.csv
+*.xlsx
+*.parquet
+
+# Jupyter
 .ipynb_checkpoints
+.jupyter
+jupyter_notebook_config.py
 
 # IDEs
-.vscode/
 .idea/
+.vscode/
+*.swp
+*.swo
+
+# Volumes do Docker
+postgres_data/
+postgres_airflow_data/
