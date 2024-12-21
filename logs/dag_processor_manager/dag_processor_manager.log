@@ -1,216 +1,388 @@
-[2024-12-20T18:30:51.056+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
-[2024-12-20T18:30:51.057+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
-[2024-12-20T18:30:51.058+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
-[2024-12-20T18:30:51.058+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
-[2024-12-20T18:30:51.060+0000] {manager.py:758} INFO - There are 0 files in /opt/airflow/dags
-[2024-12-20T18:35:51.872+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
-[2024-12-20T18:35:51.874+0000] {manager.py:758} INFO - There are 0 files in /opt/airflow/dags
-[2024-12-20T18:39:44.838+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
-[2024-12-20T18:44:05.551+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
-[2024-12-20T18:44:05.552+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
-[2024-12-20T18:44:05.552+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
-[2024-12-20T18:44:05.553+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
-[2024-12-20T18:44:05.558+0000] {manager.py:758} INFO - There are 2 files in /opt/airflow/dags
-[2024-12-20T18:44:05.864+0000] {manager.py:887} INFO - 
+[2024-12-21T04:39:47.862+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
+[2024-12-21T04:39:47.863+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
+[2024-12-21T04:39:47.863+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
+[2024-12-21T04:39:47.864+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2024-12-21T04:39:47.868+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2024-12-21T04:39:48.140+0000] {manager.py:887} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  ----------
-/opt/airflow/dags/analytics_tables_dag.py     26  0.12s             0           0
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py                            0           1  0.11s           2024-12-21T04:39:48
+/opt/airflow/dags/analytics_tables_dag.py     28  0.01s             0           0
 /opt/airflow/dags/data_load_dag.py            27  0.08s             0           0
 ================================================================================
-[2024-12-20T18:44:36.091+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.56s           2024-12-20T18:44:06
-/opt/airflow/dags/data_load_dag.py                                  1           0  2.31s           2024-12-20T18:44:08
-================================================================================
-[2024-12-20T18:45:06.198+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.36s           2024-12-20T18:44:37
-/opt/airflow/dags/data_load_dag.py                                  1           0  1.69s           2024-12-20T18:44:39
-================================================================================
-[2024-12-20T18:45:36.914+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.35s           2024-12-20T18:45:08
-/opt/airflow/dags/data_load_dag.py                                  1           0  1.89s           2024-12-20T18:45:11
-================================================================================
-[2024-12-20T18:46:07.266+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.30s           2024-12-20T18:45:38
-/opt/airflow/dags/data_load_dag.py                                  1           0  1.98s           2024-12-20T18:45:44
-================================================================================
-[2024-12-20T18:46:37.744+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.20s           2024-12-20T18:46:08
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.99s           2024-12-20T18:46:15
-================================================================================
-[2024-12-20T18:47:08.037+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.21s           2024-12-20T18:46:39
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.93s           2024-12-20T18:46:46
-================================================================================
-[2024-12-20T18:47:38.488+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.21s           2024-12-20T18:47:09
-/opt/airflow/dags/data_load_dag.py                                  1           0  1.01s           2024-12-20T18:47:18
-================================================================================
-[2024-12-20T18:48:08.873+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.23s           2024-12-20T18:47:39
-/opt/airflow/dags/data_load_dag.py                                  1           0  1.05s           2024-12-20T18:47:49
-================================================================================
-[2024-12-20T18:48:39.004+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.20s           2024-12-20T18:48:11
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.91s           2024-12-20T18:48:20
-================================================================================
-[2024-12-20T18:49:05.586+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
-[2024-12-20T18:49:05.590+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
-[2024-12-20T18:49:09.643+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/data_generation_dag.py                            0           1  0.09s           2024-12-20T18:49:05
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.22s           2024-12-20T18:48:41
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.99s           2024-12-20T18:48:52
-================================================================================
-[2024-12-20T18:49:39.875+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/data_generation_dag.py                            0           1  0.11s           2024-12-20T18:49:35
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.21s           2024-12-20T18:49:11
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.95s           2024-12-20T18:49:23
-================================================================================
-[2024-12-20T18:49:41.977+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
-[2024-12-20T18:49:41.977+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
-[2024-12-20T18:49:42.618+0000] {manager.py:469} INFO - Exiting gracefully upon receiving signal 15
-[2024-12-20T19:03:51.239+0000] {manager.py:487} INFO - Processing files using up to 2 processes at a time 
-[2024-12-20T19:03:51.240+0000] {manager.py:488} INFO - Process each file at most once every 30 seconds
-[2024-12-20T19:03:51.240+0000] {manager.py:489} INFO - Checking for new files in /opt/airflow/dags every 300 seconds
-[2024-12-20T19:03:51.241+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
-[2024-12-20T19:03:51.244+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
-[2024-12-20T19:03:51.462+0000] {manager.py:887} INFO - 
+[2024-12-21T04:40:18.339+0000] {manager.py:887} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 -----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/data_generation_dag.py                            0           1  0.14s           2024-12-20T19:03:51
-/opt/airflow/dags/analytics_tables_dag.py     27  0.08s             0           0
-/opt/airflow/dags/data_load_dag.py                                  0           0
+/opt/airflow/dags/data_generation_dag.py      30  0.01s             0           1  0.11s           2024-12-21T04:39:48
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.59s           2024-12-21T04:39:48
+/opt/airflow/dags/data_load_dag.py                                  1           0  2.47s           2024-12-21T04:39:50
 ================================================================================
-[2024-12-20T19:04:17.743+0000] {manager.py:1137} WARNING - Skipping processing of missing file: /opt/airflow/dags/data_generation_dag.py
-[2024-12-20T19:04:21.776+0000] {manager.py:887} INFO - 
+[2024-12-21T04:40:48.613+0000] {manager.py:887} INFO - 
 ================================================================================
 DAG File Processing Stats
 
 File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 -----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py     30  0.01s             1           0  0.20s           2024-12-20T19:03:51
-/opt/airflow/dags/data_load_dag.py                                  1           0  1.07s           2024-12-20T19:03:52
+/opt/airflow/dags/data_generation_dag.py      34  0.01s             0           1  0.09s           2024-12-21T04:40:18
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.21s           2024-12-21T04:40:19
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.94s           2024-12-21T04:40:21
 ================================================================================
-[2024-12-20T19:04:51.899+0000] {manager.py:887} INFO - 
-================================================================================
-DAG File Processing Stats
-
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.17s           2024-12-20T19:04:21
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.93s           2024-12-20T19:04:23
-================================================================================
-[2024-12-20T19:05:22.211+0000] {manager.py:887} INFO - 
+[2024-12-21T04:41:18.806+0000] {manager.py:887} INFO - 
 ================================================================================
 DAG File Processing Stats
 
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 -----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-20T19:04:52
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.93s           2024-12-20T19:04:55
+/opt/airflow/dags/data_generation_dag.py      38  0.01s             0           1  0.10s           2024-12-21T04:40:48
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:40:49
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.90s           2024-12-21T04:40:52
 ================================================================================
-[2024-12-20T19:05:52.404+0000] {manager.py:887} INFO - 
+[2024-12-21T04:41:49.055+0000] {manager.py:887} INFO - 
 ================================================================================
 DAG File Processing Stats
 
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 -----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-20T19:05:22
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.71s           2024-12-20T19:05:26
+/opt/airflow/dags/data_generation_dag.py      42  0.01s             0           1  0.09s           2024-12-21T04:41:18
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.20s           2024-12-21T04:41:20
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.99s           2024-12-21T04:41:23
 ================================================================================
-[2024-12-20T19:06:23.022+0000] {manager.py:887} INFO - 
+[2024-12-21T04:42:19.239+0000] {manager.py:887} INFO - 
 ================================================================================
 DAG File Processing Stats
 
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 -----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.25s           2024-12-20T19:05:53
-/opt/airflow/dags/data_load_dag.py                                  1           0  1.08s           2024-12-20T19:05:57
+/opt/airflow/dags/data_generation_dag.py      46  0.01s             0           1  0.09s           2024-12-21T04:41:49
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:41:50
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.92s           2024-12-21T04:41:55
 ================================================================================
-[2024-12-20T19:06:53.173+0000] {manager.py:887} INFO - 
+[2024-12-21T04:42:49.350+0000] {manager.py:887} INFO - 
 ================================================================================
 DAG File Processing Stats
 
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 -----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.21s           2024-12-20T19:06:24
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.94s           2024-12-20T19:06:29
+/opt/airflow/dags/data_generation_dag.py      50  0.01s             0           1  0.08s           2024-12-21T04:42:19
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:42:21
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.85s           2024-12-21T04:42:26
 ================================================================================
-[2024-12-20T19:07:23.493+0000] {manager.py:887} INFO - 
+[2024-12-21T04:43:19.494+0000] {manager.py:887} INFO - 
 ================================================================================
 DAG File Processing Stats
 
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 -----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.20s           2024-12-20T19:06:54
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.95s           2024-12-20T19:07:00
+/opt/airflow/dags/data_generation_dag.py      54  0.01s             0           1  0.08s           2024-12-21T04:42:49
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.22s           2024-12-21T04:42:52
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.90s           2024-12-21T04:42:57
 ================================================================================
-[2024-12-20T19:07:53.907+0000] {manager.py:887} INFO - 
+[2024-12-21T04:43:49.680+0000] {manager.py:887} INFO - 
 ================================================================================
 DAG File Processing Stats
 
-File Path                                  PID    Runtime      # DAGs    # Errors  Last Runtime    Last Run
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
 -----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
-/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.25s           2024-12-20T19:07:24
-/opt/airflow/dags/data_load_dag.py                                  1           0  0.99s           2024-12-20T19:07:31
+/opt/airflow/dags/data_generation_dag.py      58  0.01s             0           1  0.08s           2024-12-21T04:43:19
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:43:23
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.94s           2024-12-21T04:43:28
+================================================================================
+[2024-12-21T04:44:19.830+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py      62  0.01s             0           1  0.09s           2024-12-21T04:43:49
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.20s           2024-12-21T04:43:53
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.89s           2024-12-21T04:43:59
+================================================================================
+[2024-12-21T04:44:47.935+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2024-12-21T04:44:47.938+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2024-12-21T04:44:49.974+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py      66  0.01s             0           1  0.08s           2024-12-21T04:44:19
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.22s           2024-12-21T04:44:25
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.88s           2024-12-21T04:44:30
+================================================================================
+[2024-12-21T04:45:20.231+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py      70  0.01s             0           1  0.09s           2024-12-21T04:44:50
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.21s           2024-12-21T04:44:56
+/opt/airflow/dags/data_load_dag.py                                  1           0  1.00s           2024-12-21T04:45:02
+================================================================================
+[2024-12-21T04:45:50.419+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py      74  0.01s             0           1  0.08s           2024-12-21T04:45:20
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.18s           2024-12-21T04:45:26
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.92s           2024-12-21T04:45:33
+================================================================================
+[2024-12-21T04:46:20.530+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py      78  0.01s             0           1  0.09s           2024-12-21T04:45:50
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:45:56
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.85s           2024-12-21T04:46:04
+================================================================================
+[2024-12-21T04:46:50.842+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py      82  0.01s             0           1  0.11s           2024-12-21T04:46:20
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.24s           2024-12-21T04:46:26
+/opt/airflow/dags/data_load_dag.py                                  1           0  1.05s           2024-12-21T04:46:35
+================================================================================
+[2024-12-21T04:47:21.105+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py      86  0.01s             0           1  0.09s           2024-12-21T04:46:50
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:46:57
+/opt/airflow/dags/data_load_dag.py                                  1           0  1.00s           2024-12-21T04:47:07
+================================================================================
+[2024-12-21T04:47:51.281+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py      90  0.01s             0           1  0.08s           2024-12-21T04:47:21
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:47:27
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.92s           2024-12-21T04:47:38
+================================================================================
+[2024-12-21T04:48:21.514+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py      94  0.01s             0           1  0.08s           2024-12-21T04:47:51
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:47:57
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.96s           2024-12-21T04:48:09
+================================================================================
+[2024-12-21T04:48:51.780+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py      98  0.01s             0           1  0.09s           2024-12-21T04:48:21
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.21s           2024-12-21T04:48:27
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.99s           2024-12-21T04:48:40
+================================================================================
+[2024-12-21T04:49:22.066+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     102  0.01s             0           1  0.10s           2024-12-21T04:48:51
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.23s           2024-12-21T04:48:58
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.99s           2024-12-21T04:49:11
+================================================================================
+[2024-12-21T04:49:48.153+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2024-12-21T04:49:48.156+0000] {manager.py:758} INFO - There are 3 files in /opt/airflow/dags
+[2024-12-21T04:49:52.201+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     106  0.01s             0           1  0.09s           2024-12-21T04:49:22
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.17s           2024-12-21T04:49:28
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.87s           2024-12-21T04:49:43
+================================================================================
+[2024-12-21T04:50:22.334+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     110  0.01s             0           1  0.08s           2024-12-21T04:49:52
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.18s           2024-12-21T04:49:59
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.89s           2024-12-21T04:50:14
+================================================================================
+[2024-12-21T04:50:52.537+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     114  0.01s             0           1  0.08s           2024-12-21T04:50:22
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.20s           2024-12-21T04:50:29
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.95s           2024-12-21T04:50:45
+================================================================================
+[2024-12-21T04:51:22.717+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     118  0.01s             0           1  0.10s           2024-12-21T04:50:52
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:50:59
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.91s           2024-12-21T04:51:16
+================================================================================
+[2024-12-21T04:51:52.994+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     122  0.01s             0           1  0.09s           2024-12-21T04:51:22
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:51:30
+/opt/airflow/dags/data_load_dag.py                                  1           0  1.05s           2024-12-21T04:51:47
+================================================================================
+[2024-12-21T04:52:23.256+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     126  0.01s             0           1  0.09s           2024-12-21T04:51:53
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.20s           2024-12-21T04:52:01
+/opt/airflow/dags/data_load_dag.py                                  1           0  1.05s           2024-12-21T04:52:19
+================================================================================
+[2024-12-21T04:52:53.402+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     130  0.01s             0           1  0.08s           2024-12-21T04:52:23
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.19s           2024-12-21T04:52:31
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.89s           2024-12-21T04:52:50
+================================================================================
+[2024-12-21T04:53:23.555+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     134  0.01s             0           1  0.07s           2024-12-21T04:52:53
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.21s           2024-12-21T04:53:02
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.91s           2024-12-21T04:53:21
+================================================================================
+[2024-12-21T04:53:53.689+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     138  0.01s             0           1  0.08s           2024-12-21T04:53:23
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.18s           2024-12-21T04:53:32
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.89s           2024-12-21T04:53:52
+================================================================================
+[2024-12-21T04:54:23.825+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                    PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py     142  0.01s             0           1  0.08s           2024-12-21T04:53:53
+/opt/airflow/dags/analytics_tables_dag.py                           1           0  0.26s           2024-12-21T04:54:04
+/opt/airflow/dags/data_load_dag.py                                  1           0  0.89s           2024-12-21T04:54:23
+================================================================================
+[2024-12-21T04:54:49.032+0000] {manager.py:755} INFO - Searching for files in /opt/airflow/dags
+[2024-12-21T04:54:49.035+0000] {manager.py:758} INFO - There are 4 files in /opt/airflow/dags
+[2024-12-21T04:54:54.208+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py                                   145  0.02s             0           1  0.08s           2024-12-21T04:54:23
+/opt/airflow/dags/analytics_tables_dag.py                                                         1           0  0.18s           2024-12-21T04:54:35
+/opt/airflow/dags/data_load_dag.py                                         146  0.01s             1           0  0.89s           2024-12-21T04:54:23
+/opt/airflow/dags/.ipynb_checkpoints/analytics_tables_dag-checkpoint.py                           1           0  0.31s           2024-12-21T04:54:49
+================================================================================
+[2024-12-21T04:55:24.497+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py                                   150  0.01s             0           1  0.10s           2024-12-21T04:54:54
+/opt/airflow/dags/analytics_tables_dag.py                                                         1           0  0.21s           2024-12-21T04:55:05
+/opt/airflow/dags/data_load_dag.py                                                                1           0  0.91s           2024-12-21T04:54:55
+/opt/airflow/dags/.ipynb_checkpoints/analytics_tables_dag-checkpoint.py                           1           0  0.23s           2024-12-21T04:55:19
+================================================================================
+[2024-12-21T04:55:54.737+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py                                   155  0.01s             0           1  0.14s           2024-12-21T04:55:24
+/opt/airflow/dags/analytics_tables_dag.py                                                         1           0  0.34s           2024-12-21T04:55:35
+/opt/airflow/dags/data_load_dag.py                                                                1           0  1.05s           2024-12-21T04:55:26
+/opt/airflow/dags/.ipynb_checkpoints/analytics_tables_dag-checkpoint.py                           1           0  0.19s           2024-12-21T04:55:49
+================================================================================
+[2024-12-21T04:56:25.101+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py                                   160  0.01s             0           1  0.08s           2024-12-21T04:55:54
+/opt/airflow/dags/analytics_tables_dag.py                                                         1           0  0.19s           2024-12-21T04:56:06
+/opt/airflow/dags/data_load_dag.py                                                                1           0  0.99s           2024-12-21T04:55:57
+/opt/airflow/dags/.ipynb_checkpoints/analytics_tables_dag-checkpoint.py                           1           0  0.34s           2024-12-21T04:56:20
+================================================================================
+[2024-12-21T04:56:55.489+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py                                   165  0.01s             0           1  0.09s           2024-12-21T04:56:25
+/opt/airflow/dags/analytics_tables_dag.py                                                         1           0  0.19s           2024-12-21T04:56:37
+/opt/airflow/dags/data_load_dag.py                                                                1           0  1.03s           2024-12-21T04:56:29
+/opt/airflow/dags/.ipynb_checkpoints/analytics_tables_dag-checkpoint.py                           1           0  0.20s           2024-12-21T04:56:50
+================================================================================
+[2024-12-21T04:57:25.725+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py                                   170  0.01s             0           1  0.08s           2024-12-21T04:56:55
+/opt/airflow/dags/analytics_tables_dag.py                                                         1           0  0.37s           2024-12-21T04:57:07
+/opt/airflow/dags/data_load_dag.py                                                                1           0  1.04s           2024-12-21T04:57:00
+/opt/airflow/dags/.ipynb_checkpoints/analytics_tables_dag-checkpoint.py                           1           0  0.19s           2024-12-21T04:57:20
+================================================================================
+[2024-12-21T04:57:56.161+0000] {manager.py:887} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                  PID  Runtime      # DAGs    # Errors  Last Runtime    Last Run
+-----------------------------------------------------------------------  -----  ---------  --------  ----------  --------------  -------------------
+/opt/airflow/dags/data_generation_dag.py                                   175  0.01s             0           1  0.08s           2024-12-21T04:57:25
+/opt/airflow/dags/analytics_tables_dag.py                                                         1           0  0.23s           2024-12-21T04:57:39
+/opt/airflow/dags/data_load_dag.py                                                                1           0  1.02s           2024-12-21T04:57:31
+/opt/airflow/dags/.ipynb_checkpoints/analytics_tables_dag-checkpoint.py                           1           0  0.41s           2024-12-21T04:57:51
 ================================================================================

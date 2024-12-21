@@ -70,6 +70,8 @@ services:
      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres-airflow/airflow
      - AIRFLOW__CORE__LOAD_EXAMPLES=false
      - AIRFLOW__CORE__FERNET_KEY=${FERNET_KEY}
+     - AIRFLOW_UID=50000
+     - AIRFLOW_GID=0
    command: version
    entrypoint: >
      bash -c "
@@ -98,6 +100,8 @@ services:
      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres-airflow/airflow
      - AIRFLOW__CORE__LOAD_EXAMPLES=false
      - AIRFLOW__CORE__FERNET_KEY=${FERNET_KEY}
+     - AIRFLOW_UID=50000
+     - AIRFLOW_GID=0
    volumes:
      - ./dags:/opt/airflow/dags
      - ./logs:/opt/airflow/logs
@@ -125,6 +129,8 @@ services:
      - AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://airflow:airflow@postgres-airflow/airflow
      - AIRFLOW__CORE__LOAD_EXAMPLES=false
      - AIRFLOW__CORE__FERNET_KEY=${FERNET_KEY}
+     - AIRFLOW_UID=50000
+     - AIRFLOW_GID=0
    volumes:
      - ./dags:/opt/airflow/dags
      - ./logs:/opt/airflow/logs
