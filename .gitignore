@@ -34,3 +34,5 @@ jupyter_notebook_config.py
 # Volumes do Docker
 postgres_data/
 postgres_airflow_data/
+
+*.log
