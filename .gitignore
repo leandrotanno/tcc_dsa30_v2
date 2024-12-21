@@ -9,11 +9,15 @@ venv/
 .env
 
 # Airflow
-logs/
 airflow.db
 airflow.cfg
 unittests.cfg
 webserver_config.py
+
+# Airflow logs
+logs/**/*.log
+logs/**/*.pid
+logs/**/*.err
 
 # Dados
 *.csv
