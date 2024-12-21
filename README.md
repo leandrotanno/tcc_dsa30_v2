@@ -54,7 +54,7 @@ chmod -R 777 ./dags ./logs ./plugins
 
 5. Inicie os containers:
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ## Acessando as Interfaces
@@ -90,12 +90,12 @@ create_analytics_tables.py
 ## Parando o ambiente
 Para parar os containers:
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ## Para remover volumes e começar do zero:
 ```bash
-docker-compose down -v
+docker compose down -v
 ```
 
 ## Troubleshooting
