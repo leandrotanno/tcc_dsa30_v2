@@ -7,6 +7,41 @@ import time
 from tqdm import tqdm
 import os
 
+ordem_colunas = {
+    'produtos': ['produto_id', 'nome', 'categoria', 'preco_base', 'custo', 
+                 'colecao', 'e_atemporal', 'meses_venda', 'data_inclusao'],
+    
+    'clientes': ['cliente_id', 'data_cadastro', 'idade', 'genero', 'estado_civil', 
+                 'estado', 'faixa_renda', 'dispositivo_principal', 'canal_aquisicao', 
+                 'tem_filhos', 'frequencia_compras'],
+    
+    'vendas': ['venda_id', 'cliente_id', 'data_venda', 'valor_total', 'desconto', 
+               'valor_final', 'metodo_pagamento', 'parcelas', 'status'],
+    
+    'itens_venda': ['venda_id', 'produto_id', 'quantidade', 'valor_unitario', 
+                    'valor_total', 'margem'],
+    
+    'carrinhos_abandonados': ['cliente_id', 'data_abandono', 'valor_total', 'num_itens', 
+                             'dispositivo', 'razao_abandono', 'itens'],
+    
+    'navegacao': ['cliente_id', 'produto_id', 'data_sessao', 'tempo_visualizacao', 
+                  'adicionou_carrinho', 'dispositivo', 'origem_trafego', 'horario', 
+                  'dia_semana'],
+    
+    'campanhas': ['campanha_id', 'nome', 'plataforma', 'tipo_midia', 'objetivo', 
+                  'data_inicio', 'data_fim', 'status', 'budget_planejado', 'segmentacao'],
+    
+    'metricas_campanhas': ['campanha_id', 'data_metrica', 'impressoes', 'cliques', 'ctr', 
+                          'cpc', 'cpm', 'custo_total', 'conversoes', 'valor_conversoes', 
+                          'roas', 'bounce_rate', 'visualizacoes_pagina'],
+    
+    'criativos': ['criativo_id', 'campanha_id', 'tipo', 'formato', 'nome', 'status', 
+                  'data_criacao'],
+    
+    'metricas_criativos': ['criativo_id', 'data_metrica', 'impressoes', 'cliques', 
+                          'ctr', 'custo', 'conversoes']
+}
+
 def log_progress(message):
     """Função auxiliar para log com timestamp"""
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -570,10 +605,12 @@ def gerar_metricas_criativos(df_criativos, df_metricas_campanhas):
     
     return df
 
-def salvar_dataframe(df, nome_arquivo):
-    """Salva DataFrame com informações de tamanho"""
-    log_progress(f"Salvando {nome_arquivo}...")
-    start_time = time.time()
+def salvar_dataframe(df, nome_arquivo, ordem_colunas):
+    """Salva DataFrame com ordem específica de colunas"""
+    df_ordenado = df[ordem_colunas[nome_arquivo.replace('.csv', '')]]
+    df_ordenado.to_csv(nome_arquivo, index=False)
+    print(f"Arquivo {nome_arquivo} salvo com {len(df_ordenado)} registros")
+
     
     df.to_csv(nome_arquivo, index=False)
     
@@ -619,16 +656,19 @@ if __name__ == "__main__":
         
         # Salvando arquivos
         log_progress("Iniciando salvamento dos arquivos...")
-        salvar_dataframe(df_produtos, 'produtos.csv')
-        salvar_dataframe(df_clientes, 'clientes.csv')
-        salvar_dataframe(df_vendas, 'vendas.csv')
-        salvar_dataframe(df_itens_venda, 'itens_venda.csv')
-        salvar_dataframe(df_carrinhos, 'carrinhos_abandonados.csv')
-        salvar_dataframe(df_navegacao, 'navegacao.csv')
-        salvar_dataframe(df_campanhas, 'campanhas.csv')
-        salvar_dataframe(df_metricas_campanhas, 'metricas_campanhas.csv')
-        salvar_dataframe(df_criativos, 'criativos.csv')
-        salvar_dataframe(df_metricas_criativos, 'metricas_criativos.csv')
+        print("Salvando arquivos...")
+        salvar_dataframe(df_produtos, 'produtos.csv', ordem_colunas)
+        salvar_dataframe(df_clientes, 'clientes.csv', ordem_colunas)
+        salvar_dataframe(df_vendas, 'vendas.csv', ordem_colunas)
+        salvar_dataframe(df_itens_venda, 'itens_venda.csv', ordem_colunas)
+        salvar_dataframe(df_carrinhos, 'carrinhos_abandonados.csv', ordem_colunas)
+        salvar_dataframe(df_navegacao, 'navegacao.csv', ordem_colunas)
+        salvar_dataframe(df_campanhas, 'campanhas.csv', ordem_colunas)
+        salvar_dataframe(df_metricas_campanhas, 'metricas_campanhas.csv', ordem_colunas)
+        salvar_dataframe(df_criativos, 'criativos.csv', ordem_colunas)
+        salvar_dataframe(df_metricas_criativos, 'metricas_criativos.csv', ordem_colunas)
+
+        print("Processo finalizado!")
         
         end_time = time.time()
         total_duration = round(end_time - start_time, 2)
