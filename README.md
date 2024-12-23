@@ -31,7 +31,7 @@ ecommerce_analytics/ \
 1. Clone o repositório:
 ```bash
 git clone https://github.com/leandrotanno/tcc_dsa30_v2.git
-cd cc_dsa30_v2
+cd tcc_dsa30_v2
 ```
 2. Copie o .env.example:
 ```bash
